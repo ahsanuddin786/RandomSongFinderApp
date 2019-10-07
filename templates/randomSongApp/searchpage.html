@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SearchPage</title>
+    <link rel="stylesheet" href="{% static "css/appstyles.css" %}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Search for an album, artist, or song</h1>
+    <div class="container">
+      <form method="post" action="artist">
+        {{form}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </form>
+
+      <table style="width:100%" border="2px">
+      <tr>
+        <th>Artist</th>
+        <th>Followers</th>
+        <th>Popularity</th>
+      </tr>
+
+      <tr>
+        <td>{{ context.artist_name }}</td>
+        <td>{{ context.artist_followers }}</td>
+        <td>{{ context.artist_popularity }}</td>
+      </tr>
+    </table>
+
+  </body>
+</html>
