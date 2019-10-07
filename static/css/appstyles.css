@@ -1,0 +1,24 @@
+h1{
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  text-align: center;
+  border-width: medium;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.anchor-class {
+  text-align: center;
+}
